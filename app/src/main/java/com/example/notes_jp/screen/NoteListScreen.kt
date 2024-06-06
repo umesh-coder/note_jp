@@ -32,7 +32,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.notes_jp.model.Note
@@ -47,20 +49,33 @@ fun NoteListScreen(navController: NavHostController, noteViewModel: NoteViewMode
 
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text("Notes") })
+            TopAppBar(title = { Text("Notes" , color = Color.Blue ,
+                style = MaterialTheme.typography.headlineLarge)
+            })
         },
+
         floatingActionButton = {
             FloatingActionButton(onClick = { navController.navigate("note/0") }) {
-                Icon(Icons.Default.Add, contentDescription = "ADD")
+                Icon(Icons.Default.Add, contentDescription = "ADD" , tint = Color.Blue )
             }
         }
     ) { paddingValues ->
         Box(modifier = Modifier.padding(paddingValues)) {
+            if (notes.isEmpty()) {
+                Text(
+                    text = "No notes available",
+                    style = MaterialTheme.typography.headlineLarge,
+                    modifier = Modifier.fillMaxSize().padding(16.dp),
+                    color = Color.Gray,
+                    textAlign = TextAlign.Center
+                )
+            }else{
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 contentPadding = PaddingValues(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
+
                 items(notes) { note ->
                     NoteItem(
                         note = note,
@@ -71,6 +86,7 @@ fun NoteListScreen(navController: NavHostController, noteViewModel: NoteViewMode
 
                     )
                 }
+            }
             }
         }
     }
@@ -100,7 +116,7 @@ fun NoteItem(note: Note, onClick: () -> Unit, onDelete: () -> Unit) {
         ) {
             Text(text = note.title, style = MaterialTheme.typography.headlineLarge)
             Spacer(modifier = Modifier.height(4.dp))
-            Text(text = note.description, style = MaterialTheme.typography.bodyMedium)
+//            Text(text = note.description, style = MaterialTheme.typography.bodyMedium)
         }
     }
     if (showDialog.value) {
