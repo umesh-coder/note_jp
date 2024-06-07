@@ -1,16 +1,9 @@
 
-skotlin:S1172‚"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8ç…ƒìş1J$bbe80719-f252-42d4-ab72-0498a3ea24c8
-’kotlin:S107€"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8†ƒìş1J$e91672be-2fd9-4772-b6ce-8eef07bba700
-ykotlin:S1481–"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8·†ƒìş1J$908c2a39-f472-478e-91f1-b2ed6550d605
-wkotlin:S1481”"1Remove this unused "linkSelected" local variable.(ÃÕìô8·†ƒìş1J$510973b7-e532-4340-a745-c7d9352fb8c0
-dkotlin:S1128"Remove this unused import.(ºÂ½ùÿÿÿÿ8¾†ƒìş1J$caaa67fa-38ca-4a6c-9e06-f1146462b3ce
-dkotlin:S1128"Remove this unused import.(é¢êáüÿÿÿÿ8¾†ƒìş1J$767de42b-3992-46dc-8dd6-2300dcbf697b
-_kotlin:S1128"Remove this unused import.(ØÂÎ©8¾†ƒìş1J$159e0ce7-d6bd-4446-8aa6-5c5945f5c2a7
-_kotlin:S1128"Remove this unused import.(½“§8¾†ƒìş1J$c2607feb-b3eb-4bc7-ad66-2b57330dde5e
-_kotlin:S1128$"Remove this unused import.(ø£ƒò8¾†ƒìş1J$c35b5fc1-c076-4156-9b2d-196a02c3671f
-_kotlin:S1128."Remove this unused import.(š ”8¾†ƒìş1J$47b0ecfa-a14e-4885-a04f-aa913ede360c
-_kotlin:S1128D"Remove this unused import.(®©Ô”8¾†ƒìş1J$f6aced14-95fd-4ca0-bb90-1205be88ed56
-mkotlin:S1874g"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8Ã†ƒìş1J$d59790ba-0166-4a1d-9f10-5bb3c6ff65b0
-hkotlin:S1874è"#Deprecated code should not be used.(™B8Ã†ƒìş1J$a6ceb993-cfe3-47eb-ab13-3e84a8d549f4
-nkotlin:S1874ş"#Deprecated code should not be used.(œ©ââıÿÿÿÿ8Ã†ƒìş1J$b2294679-a4b7-4868-827d-7614d7de0683
-œkotlin:S3776P"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(éåÏÑşÿÿÿÿ8Ä†ƒìş1J$15392ccb-314a-4557-bbe7-463b613654c3
+Mkotlin:S1172ı"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8óÛ‹ÿ1
+lkotlin:S107û"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8ŸóÛ‹ÿ1
+Skotlin:S1481‘"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8¦óÛ‹ÿ1
+Qkotlin:S1481"1Remove this unused "linkSelected" local variable.(ÃÕìô8¦óÛ‹ÿ1
+Gkotlin:S1874c"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8±óÛ‹ÿ1
+Bkotlin:S1874ã"#Deprecated code should not be used.(™B8²óÛ‹ÿ1
+Hkotlin:S1874ù"#Deprecated code should not be used.(œ©ââıÿÿÿÿ8²óÛ‹ÿ1
+vkotlin:S3776I"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(éåÏÑşÿÿÿÿ8³óÛ‹ÿ1

@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -25,12 +26,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
@@ -47,16 +51,23 @@ fun NoteListScreen(navController: NavHostController, noteViewModel: NoteViewMode
     val notes = noteViewModel.allNotes.collectAsState(initial = emptyList()).value
     val scope = rememberCoroutineScope()
 
+
+
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text("Notes" , color = Color.Blue ,
-                style = MaterialTheme.typography.headlineLarge)
-            })
+            TopAppBar(
+                title = {
+                    Text(
+                        "Notes", color = Color.Blue,
+                        style = MaterialTheme.typography.headlineLarge
+                    )
+                },
+            )
         },
 
         floatingActionButton = {
             FloatingActionButton(onClick = { navController.navigate("note/0") }) {
-                Icon(Icons.Default.Add, contentDescription = "ADD" , tint = Color.Blue )
+                Icon(Icons.Default.Add, contentDescription = "ADD", tint = Color.Blue)
             }
         }
     ) { paddingValues ->
@@ -65,28 +76,30 @@ fun NoteListScreen(navController: NavHostController, noteViewModel: NoteViewMode
                 Text(
                     text = "No notes available",
                     style = MaterialTheme.typography.headlineLarge,
-                    modifier = Modifier.fillMaxSize().padding(16.dp),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp),
                     color = Color.Gray,
                     textAlign = TextAlign.Center
                 )
-            }else{
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(16.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
+            } else {
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
 
-                items(notes) { note ->
-                    NoteItem(
-                        note = note,
-                        onClick = { navController.navigate("note/${note.id}") },
-                        onDelete = {
-                            noteViewModel.delete(note)
-                        }
+                    items(notes) { note ->
+                        NoteItem(
+                            note = note,
+                            onClick = { navController.navigate("note/${note.id}") },
+                            onDelete = {
+                                noteViewModel.delete(note)
+                            }
 
-                    )
+                        )
+                    }
                 }
-            }
             }
         }
     }

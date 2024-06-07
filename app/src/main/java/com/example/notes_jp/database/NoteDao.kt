@@ -10,6 +10,9 @@ interface NoteDao {
     @Query("SELECT * FROM notes ORDER BY id DESC")
     fun getAllNotes(): Flow<List<Note>>
 
+    @Query("SELECT * FROM notes WHERE id = :noteId")
+    suspend fun getNoteById(noteId: Int): Note?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(note: Note)
 
@@ -18,5 +21,8 @@ interface NoteDao {
 
     @Delete
     suspend fun delete(note: Note)
+
+    @Query("SELECT * FROM notes WHERE title LIKE '%' || :query || '%' OR description LIKE '%' || :query || '%'")
+    fun searchNotes(query: String): Flow<List<Note>>
 }
 

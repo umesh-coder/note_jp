@@ -3,7 +3,6 @@ package com.example.notes_jp.screen
 
 import android.util.Log
 import android.widget.Toast
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -14,15 +13,12 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddLink
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.material.icons.filled.FormatAlignCenter
@@ -33,7 +29,6 @@ import androidx.compose.material.icons.filled.FormatColorText
 import androidx.compose.material.icons.filled.FormatItalic
 import androidx.compose.material.icons.filled.FormatSize
 import androidx.compose.material.icons.filled.FormatUnderlined
-import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Title
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
@@ -43,7 +38,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldColors
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -65,7 +59,6 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.notes_jp.model.Note
@@ -79,18 +72,21 @@ import kotlinx.coroutines.launch
 @Composable
 fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, noteId: Int?) {
 
-    var title by remember { mutableStateOf("") }
+    val title by noteViewModel.title.collectAsState("")
     val descriptionState = rememberRichTextState() // Initialize RichTextState for description
     val scope = rememberCoroutineScope()
-    val notes by noteViewModel.allNotes.collectAsState(initial = emptyList())
+    val notes by noteViewModel.allNotes.collectAsState(emptyList())
 
     LaunchedEffect(noteId, notes) {
         if (noteId != null && noteId != 0) {
             val note = notes.find { it.id == noteId }
             note?.let {
-                title = it.title
+                noteViewModel.setTitle(it.title)
                 descriptionState.setHtml(it.description) // Set the initial HTML content
             }
+        } else {
+            noteViewModel.setTitle("")
+            descriptionState.setHtml("")
         }
     }
 
@@ -135,7 +131,7 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
     ) { paddingValues ->
         NoteScreenContent(
             title = title,
-            onTitleChange = { title = it },
+            onTitleChange = { noteViewModel.setTitle(it) },
             descriptionState = descriptionState,
             paddingValues = paddingValues
         )
@@ -192,11 +188,10 @@ fun MainScreen(state: RichTextState) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(all = 5.dp)
-                .padding(bottom = it.calculateBottomPadding())
-                ,
+                .padding(bottom = it.calculateBottomPadding()),
             verticalArrangement = Arrangement.Bottom,
 
-        )
+            )
 
         {
 
@@ -206,7 +201,7 @@ fun MainScreen(state: RichTextState) {
                     .weight(7f),
                 state = state,
                 textStyle = MaterialTheme.typography.headlineMedium,
-                label = { Text("Description" , textAlign = TextAlign.Center)}
+                label = { Text("Description", textAlign = TextAlign.Center) }
 
             )
             Spacer(modifier = Modifier.height(3.dp))
@@ -283,7 +278,7 @@ fun EditorControls(
         horizontalArrangement = Arrangement.spacedBy(3.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp),
 
-    ) {
+        ) {
         ControlWrapper(
             selected = boldSelected,
             onChangeClick = { boldSelected = it },
@@ -387,6 +382,7 @@ fun EditorControls(
 
     }
 }
+
 @Composable
 fun ControlWrapper(
     selected: Boolean,
