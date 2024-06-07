@@ -1,9 +1,9 @@
 
-Mkotlin:S1172ı"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8óÛ‹ÿ1
-lkotlin:S107û"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8ŸóÛ‹ÿ1
-Skotlin:S1481‘"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8¦óÛ‹ÿ1
-Qkotlin:S1481"1Remove this unused "linkSelected" local variable.(ÃÕìô8¦óÛ‹ÿ1
-Gkotlin:S1874c"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8±óÛ‹ÿ1
-Bkotlin:S1874ã"#Deprecated code should not be used.(™B8²óÛ‹ÿ1
-Hkotlin:S1874ù"#Deprecated code should not be used.(œ©ââıÿÿÿÿ8²óÛ‹ÿ1
-vkotlin:S3776I"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(éåÏÑşÿÿÿÿ8³óÛ‹ÿ1
+skotlin:S1172ı"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8óÛ‹ÿ1J$fcc32d7c-09ab-4044-8627-a9d2f5f4f472
+’kotlin:S107û"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8ŸóÛ‹ÿ1J$873919a3-a814-448c-af06-603e0edc6718
+ykotlin:S1481‘"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8¦óÛ‹ÿ1J$40ec3ce5-6ab7-4b92-be8a-ee3da6362ced
+wkotlin:S1481"1Remove this unused "linkSelected" local variable.(ÃÕìô8¦óÛ‹ÿ1J$4cf1aa85-aa62-41c6-bef7-33f6d99c6436
+mkotlin:S1874c"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8±óÛ‹ÿ1J$0c5503d6-43a4-450c-a780-73e58bd69de0
+hkotlin:S1874ã"#Deprecated code should not be used.(™B8²óÛ‹ÿ1J$ce5a47fd-7300-47a8-955b-4e2d90cc1bbc
+nkotlin:S1874ù"#Deprecated code should not be used.(œ©ââıÿÿÿÿ8²óÛ‹ÿ1J$b7b454ae-e3a0-46c7-833c-312daf36a85a
+œkotlin:S3776I"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(éåÏÑşÿÿÿÿ8³óÛ‹ÿ1J$cd14177b-c2ae-49c6-81c1-30d6b4b99fe4

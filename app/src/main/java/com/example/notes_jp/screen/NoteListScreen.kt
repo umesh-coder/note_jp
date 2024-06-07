@@ -49,9 +49,7 @@ import com.example.notes_jp.viewmodel.NoteViewModel
 @Composable
 fun NoteListScreen(navController: NavHostController, noteViewModel: NoteViewModel) {
     val notes = noteViewModel.allNotes.collectAsState(initial = emptyList()).value
-    val scope = rememberCoroutineScope()
-
-
+    rememberCoroutineScope()
 
     Scaffold(
         topBar = {
@@ -88,7 +86,6 @@ fun NoteListScreen(navController: NavHostController, noteViewModel: NoteViewMode
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-
                     items(notes) { note ->
                         NoteItem(
                             note = note,
