@@ -1,6 +1,6 @@
 # Notes App
 
-A simple notes application built using Jetpack Compose, Kotlin, and Android Architecture Components.
+A simple notes application built using Jetpack Compose,Room Database , Kotlin, and Android MVVM Architecture Components.
 
 ## Features
 
@@ -15,12 +15,6 @@ A simple notes application built using Jetpack Compose, Kotlin, and Android Arch
 ![Edit Note](screenshots/edit_note.png)
 
 ## Getting Started
-
-### Prerequisites
-
-- Android Studio Bumblebee | 2021.1.1+ or newer
-- Android SDK 21 or higher
-- Kotlin 1.5.31 or higher
 
 ### Installation
 
