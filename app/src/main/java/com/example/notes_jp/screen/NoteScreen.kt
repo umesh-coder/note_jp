@@ -70,6 +70,16 @@ import com.mohamedrejeb.richeditor.ui.material3.RichTextEditor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+/**
+ * Note screen
+ *
+ * @param navController
+ * @param noteViewModel
+ * @param noteId
+ *
+ * this is the Note Screen
+ */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, noteId: Int?) {
@@ -154,6 +164,17 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
 }
 
 
+/**
+ * Note screen content
+ *
+ * @param title
+ * @param onTitleChange
+ * @param descriptionState
+ * @param paddingValues
+ * @receiver
+ *
+ * This is the Content of the Note Screen
+ */
 
 @Composable
 fun NoteScreenContent(
@@ -193,6 +214,19 @@ fun NoteScreenContent(
         MainScreen(state = descriptionState)
     }
 }
+
+/**
+ * Save note
+ *
+ * @param noteId
+ * @param title
+ * @param descriptionState
+ * @param navController
+ * @param noteViewModel
+ * @param scope
+ *
+ * This function is to save the note
+ */
 private fun saveNote(
     noteId: Int?,
     title: String,
@@ -216,6 +250,13 @@ private fun saveNote(
     }
 }
 
+/**
+ * Rich Text Editor
+ *
+ * @param state
+ *
+ * This is the composable of Rich Text
+ */
 
 @Composable
 fun MainScreen(state: RichTextState) {
@@ -284,6 +325,34 @@ fun MainScreen(state: RichTextState) {
     }
 }
 
+/**
+ * Editor controls
+ *
+ * @param modifier
+ * @param state
+ * @param onBoldClick
+ * @param onItalicClick
+ * @param onUnderlineClick
+ * @param onTitleClick
+ * @param onSubtitleClick
+ * @param onTextColorClick
+ * @param onStartAlignClick
+ * @param onEndAlignClick
+ * @param onCenterAlignClick
+ * @param onExportClick
+ * @receiver
+ * @receiver
+ * @receiver
+ * @receiver
+ * @receiver
+ * @receiver
+ * @receiver
+ * @receiver
+ * @receiver
+ * @receiver
+ *
+ * This is the Controls of the Editor of Rich Text
+ */
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -421,6 +490,22 @@ fun EditorControls(
 
     }
 }
+
+/**
+ * Control wrapper
+ *
+ * @param selected
+ * @param selectedColor
+ * @param unselectedColor
+ * @param onChangeClick
+ * @param onClick
+ * @param content
+ * @receiver
+ * @receiver
+ * @receiver
+ *
+ * This is Wrapper for the Control of the Editor
+ */
 
 @Composable
 fun ControlWrapper(

@@ -44,6 +44,14 @@ import androidx.navigation.NavHostController
 import com.example.notes_jp.model.Note
 import com.example.notes_jp.viewmodel.NoteViewModel
 
+/**
+ * Note list screen
+ *
+ * @param navController
+ * @param noteViewModel
+ *
+ * This Function is used for Showing list of notes
+ */
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -102,6 +110,19 @@ fun NoteListScreen(navController: NavHostController, noteViewModel: NoteViewMode
         }
     }
 }
+
+/**
+ * Note item
+ *
+ * @param note
+ * @param onClick
+ * @param onDelete
+ * @receiver
+ * @receiver
+ *
+ * This Function is used for Single Note showing note item
+ *
+ */
 
 
 @Composable
