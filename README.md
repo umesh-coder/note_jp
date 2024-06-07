@@ -10,7 +10,7 @@ A simple notes application built using Jetpack Compose,Room Database , Kotlin, a
 
 ## Screenshots
 
-![Note List](screenshots/note_list.png)
+![Note List](ScreenShots/note_list_screen.jpg)
 ![Create Note](screenshots/create_note.png)
 ![Edit Note](screenshots/edit_note.png)
 
