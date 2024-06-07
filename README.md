@@ -5,10 +5,8 @@ A simple notes application built using Jetpack Compose, Kotlin, and Android Arch
 ## Features
 
 - Create, edit, and delete notes
-- Search notes by title or description
 - Persistent storage with Room database
 - Modern UI using Jetpack Compose
-- Snackbar notifications for validation
 
 ## Screenshots
 
