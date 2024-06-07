@@ -3,6 +3,7 @@ package com.example.notes_jp.screen
 
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -66,6 +67,7 @@ import com.example.notes_jp.viewmodel.NoteViewModel
 import com.mohamedrejeb.richeditor.model.RichTextState
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichTextEditor
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -76,6 +78,7 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
     val descriptionState = rememberRichTextState() // Initialize RichTextState for description
     val scope = rememberCoroutineScope()
     val notes by noteViewModel.allNotes.collectAsState(emptyList())
+
 
     LaunchedEffect(noteId, notes) {
         if (noteId != null && noteId != 0) {
@@ -95,13 +98,36 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
             TopAppBar(
                 title = { Text(if (noteId == 0) "Create Note" else "Edit Note") },
                 navigationIcon = {
-                    IconButton(onClick = { navController.navigateUp() }) {
+
+                    IconButton(onClick = { navController.navigateUp()
+                        if (title.isEmpty()) {
+                            Toast.makeText(
+                                navController.context,
+                                "Title cannot be empty",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            saveNote(noteId, title, descriptionState, navController, noteViewModel, scope)
+                        }
+                    }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back")
                     }
                 }
             )
         },
         floatingActionButton = {
+            BackHandler {
+                if (title.isEmpty()) {
+                    Toast.makeText(
+                        navController.context,
+                        "Title cannot be empty",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    saveNote(noteId, title, descriptionState, navController, noteViewModel, scope)
+                }
+            }
+
             FloatingActionButton(onClick = {
                 if (title.isEmpty()) {
                     Toast.makeText(
@@ -110,19 +136,7 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
-                    val note = Note(
-                        id = noteId ?: 0,
-                        title = title,
-                        description = descriptionState.toHtml() // Get the HTML content
-                    )
-                    scope.launch {
-                        if (noteId == 0) {
-                            noteViewModel.insert(note)
-                        } else {
-                            noteViewModel.update(note)
-                        }
-                        navController.navigateUp()
-                    }
+                    saveNote(noteId, title, descriptionState, navController, noteViewModel, scope)
                 }
             }) {
                 Icon(Icons.Default.Done, contentDescription = "Save", tint = Color.Blue)
@@ -136,7 +150,10 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
             paddingValues = paddingValues
         )
     }
+
 }
+
+
 
 @Composable
 fun NoteScreenContent(
@@ -145,7 +162,6 @@ fun NoteScreenContent(
     descriptionState: RichTextState, // Use RichTextState for description
     paddingValues: PaddingValues
 ) {
-
     var titleError by remember { mutableStateOf<String?>(null) }
     Column(
         modifier = Modifier
@@ -177,6 +193,29 @@ fun NoteScreenContent(
         MainScreen(state = descriptionState)
     }
 }
+private fun saveNote(
+    noteId: Int?,
+    title: String,
+    descriptionState: RichTextState,
+    navController: NavHostController,
+    noteViewModel: NoteViewModel,
+    scope: CoroutineScope
+) {
+    val note = Note(
+        id = noteId ?: 0,
+        title = title,
+        description = descriptionState.toHtml() // Get the HTML content
+    )
+    scope.launch {
+        if (noteId == 0) {
+            noteViewModel.insert(note)
+        } else {
+            noteViewModel.update(note)
+        }
+        navController.navigateUp()
+    }
+}
+
 
 @Composable
 fun MainScreen(state: RichTextState) {

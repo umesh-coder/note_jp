@@ -125,7 +125,7 @@ fun NoteItem(note: Note, onClick: () -> Unit, onDelete: () -> Unit) {
                     )
                 }
         ) {
-            Text(text = note.title, style = MaterialTheme.typography.headlineLarge)
+            Text(text = note.title, style = MaterialTheme.typography.headlineLarge , maxLines = 1 )
             Spacer(modifier = Modifier.height(4.dp))
 //            Text(text = note.description, style = MaterialTheme.typography.bodyMedium)
         }

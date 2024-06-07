@@ -1,9 +1,10 @@
 
-skotlin:S1172ı"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8óÛ‹ÿ1J$fcc32d7c-09ab-4044-8627-a9d2f5f4f472
-’kotlin:S107û"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8ŸóÛ‹ÿ1J$873919a3-a814-448c-af06-603e0edc6718
-ykotlin:S1481‘"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8¦óÛ‹ÿ1J$40ec3ce5-6ab7-4b92-be8a-ee3da6362ced
-wkotlin:S1481"1Remove this unused "linkSelected" local variable.(ÃÕìô8¦óÛ‹ÿ1J$4cf1aa85-aa62-41c6-bef7-33f6d99c6436
-mkotlin:S1874c"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8±óÛ‹ÿ1J$0c5503d6-43a4-450c-a780-73e58bd69de0
-hkotlin:S1874ã"#Deprecated code should not be used.(™B8²óÛ‹ÿ1J$ce5a47fd-7300-47a8-955b-4e2d90cc1bbc
-nkotlin:S1874ù"#Deprecated code should not be used.(œ©ââıÿÿÿÿ8²óÛ‹ÿ1J$b7b454ae-e3a0-46c7-833c-312daf36a85a
-œkotlin:S3776I"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(éåÏÑşÿÿÿÿ8³óÛ‹ÿ1J$cd14177b-c2ae-49c6-81c1-30d6b4b99fe4
+skotlin:S1172¤"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8Â«Ù‘ÿ1J$9461badc-324a-47e3-9ced-97dcb6b3343a
+’kotlin:S107¢"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8Ï«Ù‘ÿ1J$b1e7ea85-cd41-402f-8f5a-8cf25c2109e3
+ykotlin:S1481¸"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8Õ«Ù‘ÿ1J$60b4399b-bbb2-4a57-8b25-ed60a17005d4
+wkotlin:S1481¶"1Remove this unused "linkSelected" local variable.(ÃÕìô8Õ«Ù‘ÿ1J$885ed2a2-db22-447e-bde9-ed53a83bbe34
+ kotlin:S1192j"VDefine a constant instead of duplicating this literal "Title cannot be empty" 3 times.(ƒûû•şÿÿÿÿ8”ÿİ‘ÿ1J$dbd68810-1c3a-467e-9e83-cbf5fa035b8f
+mkotlin:S1874q"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8İ«Ù‘ÿ1J$611eadd7-93a6-459a-9ff9-f1f021d6d928
+hkotlin:S1874Š"#Deprecated code should not be used.(™B8İ«Ù‘ÿ1J$e7f4e538-eeb1-4b91-8cee-e4be20102793
+nkotlin:S1874 "#Deprecated code should not be used.(œ©ââıÿÿÿÿ8İ«Ù‘ÿ1J$488cd1af-3779-448d-bbe7-14162afcdf0c
+œkotlin:S3776K"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(éåÏÑşÿÿÿÿ8–ÿİ‘ÿ1J$b3f930f5-457a-41d0-a29f-eaac611e8661
