@@ -10,7 +10,7 @@ A simple notes application built using Jetpack Compose,Room Database , Kotlin, a
 
 ## Screenshots
 
-![Note List](https://github.com/umesh-coder/note_jp/blob/main/Screenshots/note_list_screen.jpg|width=100)
+![Note List](https://github.com/umesh-coder/note_jp/blob/main/Screenshots/note_list_screen.jpg)
 ![Create Note](https://github.com/umesh-coder/note_jp/blob/main/Screenshots/create_note_screen.jpg)
 ![Edit Note](https://github.com/umesh-coder/note_jp/blob/main/Screenshots/edit_note_screen.jpg)
 ![Delete Note](https://github.com/umesh-coder/note_jp/blob/main/Screenshots/delete_note.jpg)
