@@ -1,10 +1,10 @@
 
-skotlin:S1172é"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8¼êœ’ÿ1J$e7b86819-8743-4edd-b890-b810b14d7217
-’kotlin:S107ç"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8Òêœ’ÿ1J$fd63f206-ffbf-418e-9c7e-43ad38b7630f
-ykotlin:S1481ı"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8Øêœ’ÿ1J$4beba8a3-04f7-4db7-beeb-c25522b9b2b8
-wkotlin:S1481û"1Remove this unused "linkSelected" local variable.(ÃÕìô8³—’ÿ1J$9fd3630e-cd69-41f1-ab08-1d9320347514
- kotlin:S1192t"VDefine a constant instead of duplicating this literal "Title cannot be empty" 3 times.(ƒûû•şÿÿÿÿ8”ÿİ‘ÿ1J$be4f4627-5ad1-46a1-bf59-d64b1d772878
-mkotlin:S1874{"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8İ«Ù‘ÿ1J$14d84443-1e4b-44c5-a0bd-300fca77b55e
-hkotlin:S1874Ï"#Deprecated code should not be used.(™B8Şêœ’ÿ1J$80c636c3-94d2-47a1-ab51-4bb5e6637ab9
-nkotlin:S1874å"#Deprecated code should not be used.(œ©ââıÿÿÿÿ8Şêœ’ÿ1J$fa184637-1a9e-4fc2-b62a-08f675184b89
-œkotlin:S3776U"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(éåÏÑşÿÿÿÿ8–ÿİ‘ÿ1J$f96c513d-c960-432c-a857-25658ed7e04c
+skotlin:S1172ñ"(Remove these unused function parameters.(Ş€í×şÿÿÿÿ8¼êœ’ÿ1J$39f9291c-2ef1-4ba3-9bc1-3dcb9fddaf54
+’kotlin:S107ï"HThis function has 12 parameters, which is greater than the 7 authorized.(·¢ÂÏüÿÿÿÿ8Òêœ’ÿ1J$3bc89e0c-4258-4af2-876e-274e9333ae3d
+ykotlin:S1481…"3Remove this unused "showLinkDialog" local variable.(œ÷±˜8Øêœ’ÿ1J$5e279480-0b09-40bf-883a-e689e26a2cea
+wkotlin:S1481ƒ"1Remove this unused "linkSelected" local variable.(ÃÕìô8³—’ÿ1J$3bc31a4f-a95c-4be0-b033-69a17c398e82
+ kotlin:S1192u"VDefine a constant instead of duplicating this literal "Title cannot be empty" 3 times.(ƒûû•şÿÿÿÿ8”ÿİ‘ÿ1J$30225955-1028-4c05-8bb7-b4056dc02050
+nkotlin:S1874ƒ"#Deprecated code should not be used.(€¤›Ûúÿÿÿÿ8İ«Ù‘ÿ1J$15665051-2aa2-484c-a7a0-c89927dece3b
+hkotlin:S1874×"#Deprecated code should not be used.(™B8Şêœ’ÿ1J$18a42f97-a9dc-47d5-ab2d-f720683d16e9
+nkotlin:S1874í"#Deprecated code should not be used.(œ©ââıÿÿÿÿ8Şêœ’ÿ1J$e89119af-f823-43ae-96a3-7f5eb12086c4
+œkotlin:S3776U"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(éåÏÑşÿÿÿÿ8–ÿİ‘ÿ1J$7469732e-1b80-4da6-aa90-0ef6ae3e9181

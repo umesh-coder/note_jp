@@ -35,3 +35,7 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 i
 9app/src/test/java/com/example/notes_jp/ExampleUnitTest.kt,e\e\ee1bc14ebb1c308f5351f80cdc274726c6e5c74a
+x
+Happ/src/androidTest/java/com/example/notes_jp/ExampleInstrumentedTest.kt,d\2\d2db5f9170c1e3adbcdf3b3125e0c3d87a495d72
+e
+5app/src/test/java/com/example/notes_jp/NoteDaoTest.kt,3\0\302c55cbb405af3340fce4468dbf1027d324ead8

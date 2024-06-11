@@ -109,7 +109,8 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
                 title = { Text(if (noteId == 0) "Create Note" else "Edit Note") },
                 navigationIcon = {
 
-                    IconButton(onClick = { navController.navigateUp()
+                    IconButton(onClick = {
+                        navController.navigateUp()
                         if (title.isEmpty()) {
                             Toast.makeText(
                                 navController.context,
@@ -117,7 +118,14 @@ fun NoteScreen(navController: NavHostController, noteViewModel: NoteViewModel, n
                                 Toast.LENGTH_SHORT
                             ).show()
                         } else {
-                            saveNote(noteId, title, descriptionState, navController, noteViewModel, scope)
+                            saveNote(
+                                noteId,
+                                title,
+                                descriptionState,
+                                navController,
+                                noteViewModel,
+                                scope
+                            )
                         }
                     }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back")

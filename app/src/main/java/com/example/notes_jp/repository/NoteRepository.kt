@@ -4,7 +4,7 @@ import com.example.notes_jp.database.NoteDao
 import com.example.notes_jp.model.Note
 import kotlinx.coroutines.flow.Flow
 
-class NoteRepository(private val noteDao: NoteDao) {
+open class NoteRepository(private val noteDao: NoteDao) {
     val allNotes: Flow<List<Note>> = noteDao.getAllNotes()
 
 
@@ -24,7 +24,7 @@ class NoteRepository(private val noteDao: NoteDao) {
         noteDao.delete(note)
     }
 
-    fun searchNotes(query: String): Flow<List<Note>> {
+    suspend fun searchNotes(query: String): Flow<List<Note>> {
         return noteDao.searchNotes(query)
     }
 }

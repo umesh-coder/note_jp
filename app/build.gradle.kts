@@ -65,6 +65,10 @@ dependencies {
     implementation(libs.androidx.constraintlayout.compose.android)
     implementation(libs.richeditor.compose)
     implementation(libs.androidx.material.icons.extended)
+    implementation(libs.androidx.junit.ktx)
+    implementation(libs.androidx.runner)
+    implementation(libs.robolectric)
+    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -72,12 +76,16 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    testImplementation(libs.core.testing)
+    implementation(libs.kotlinx.coroutines.test)
+
+
+
 
 
     // ROOM
     implementation (libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
-
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
